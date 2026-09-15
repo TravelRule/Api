@@ -3,6 +3,7 @@
 Base URL (local dev): `http://localhost:4200`
 
 ## `GET /health`
+
 ```json
 { "status": "ok" }
 ```
@@ -10,6 +11,7 @@ Base URL (local dev): `http://localhost:4200`
 ## `POST /travel-rule/message`
 
 **Request body** (see the shared schema for the authoritative definition):
+
 ```json
 {
   "originatorInstitution": { "name": "Anchor A", "lei": "12345678901234567890", "country": "US" },
@@ -24,6 +26,7 @@ Base URL (local dev): `http://localhost:4200`
 omitted.
 
 **Response (201):**
+
 ```json
 {
   "data": {
@@ -40,10 +43,11 @@ omitted.
 ```
 
 **Response (400)** on schema validation failure:
+
 ```json
 {
   "error": "schema_validation_failed",
-  "details": [ /* raw Ajv error objects */ ]
+  "details": [/* raw Ajv error objects */]
 }
 ```
 

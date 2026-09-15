@@ -7,18 +7,18 @@ what's here and what a production system would still need to add.
 
 ## Implemented
 
-| This API's field | IVMS101 concept | Notes |
-|---|---|---|
-| `originatorInstitution.name` | `originatingVASP.name` | Institution-level only |
-| `originatorInstitution.lei` | `originatingVASP.legalPersonIdentification` (LEI variant) | Not validated against the real GLEIF LEI registry in this version |
-| `originatorInstitution.country` | `originatingVASP.country` | ISO 3166-1 alpha-2 |
-| `beneficiaryInstitution.*` | `beneficiaryVASP.*` | Mirrors originator fields |
-| `paymentReference` | Not a standard IVMS101 field | Added so a message can be tied back to the on-chain transfer it accompanies |
+| This API's field                | IVMS101 concept                                           | Notes                                                                       |
+| ------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `originatorInstitution.name`    | `originatingVASP.name`                                    | Institution-level only                                                      |
+| `originatorInstitution.lei`     | `originatingVASP.legalPersonIdentification` (LEI variant) | Not validated against the real GLEIF LEI registry in this version           |
+| `originatorInstitution.country` | `originatingVASP.country`                                 | ISO 3166-1 alpha-2                                                          |
+| `beneficiaryInstitution.*`      | `beneficiaryVASP.*`                                       | Mirrors originator fields                                                   |
+| `paymentReference`              | Not a standard IVMS101 field                              | Added so a message can be tied back to the on-chain transfer it accompanies |
 
 ## Explicitly NOT implemented
 
-- **Originator/beneficiary *customer* data.** IVMS101's core purpose is
-  identifying the actual sender/receiver *individuals or entities* behind
+- **Originator/beneficiary _customer_ data.** IVMS101's core purpose is
+  identifying the actual sender/receiver _individuals or entities_ behind
   a transfer (name, address, date of birth, national ID, etc) — not just
   the institutions. This reference version deliberately excludes all of
   this, because handling it correctly requires PII-handling

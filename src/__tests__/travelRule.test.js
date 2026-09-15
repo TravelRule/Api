@@ -35,7 +35,7 @@ test("POST /travel-rule/message accepts a valid message", async () => {
 
 test("POST /travel-rule/message rejects a message missing required fields", async () => {
   const app = buildApp();
-  const { paymentReference, ...incomplete } = validMessage;
+  const { paymentReference: _paymentReference, ...incomplete } = validMessage;
   const res = await request(app).post("/travel-rule/message").send(incomplete);
 
   assert.equal(res.status, 400);
@@ -44,7 +44,10 @@ test("POST /travel-rule/message rejects a message missing required fields", asyn
 
 test("POST /travel-rule/message rejects an LEI of the wrong length", async () => {
   const app = buildApp();
-  const bad = { ...validMessage, originatorInstitution: { ...validMessage.originatorInstitution, lei: "tooshort" } };
+  const bad = {
+    ...validMessage,
+    originatorInstitution: { ...validMessage.originatorInstitution, lei: "tooshort" },
+  };
   const res = await request(app).post("/travel-rule/message").send(bad);
 
   assert.equal(res.status, 400);

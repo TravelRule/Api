@@ -12,10 +12,10 @@ for anchor-to-anchor transfers on Stellar.
 
 ## Documentation
 
-| Doc | Covers |
-|---|---|
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Message lifecycle, schema validation, storage |
-| [`docs/API.md`](docs/API.md) | Every endpoint, request/response shapes |
+| Doc                                                  | Covers                                               |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)       | Message lifecycle, schema validation, storage        |
+| [`docs/API.md`](docs/API.md)                         | Every endpoint, request/response shapes              |
 | [`docs/IVMS101_MAPPING.md`](docs/IVMS101_MAPPING.md) | Field-by-field: what's implemented vs. the full spec |
 
 ## Quickstart

@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "description": "Reference IVMS101-style travel-rule messaging API for anchor-to-anchor transfers.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test src/__tests__/*.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "ajv": "^8.16.0",
+    "ajv-formats": "^3.0.1",
+    "@travel-rule/schema": "github:TravelRule/schema"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  }
+}
